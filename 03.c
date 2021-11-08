@@ -2,8 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
+#include "03.h"
 
-void print_space(int i)
+static int run_day3(int right, int down);
+
+static void print_space(int i)
 {
         for(int j=0; j<i;j++)
         {
@@ -11,7 +14,8 @@ void print_space(int i)
         }
 }
 
-int init_day3()
+
+int init_day3(void)
 {
     long long int result = 1;
     result *= (long long int)run_day3(1,1);
@@ -24,7 +28,7 @@ int init_day3()
     return 0;
 }
 
-int run_day3(int right, int down)
+static int run_day3(int right, int down)
 {
     //int fgets_ret_val = 1;
     char line[255];
